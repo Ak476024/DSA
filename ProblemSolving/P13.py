@@ -4,7 +4,6 @@ def addOneToNumber(A):
   length = len(A)
   carry=0
   digit=0
-  pos=0
   for i in range(length):
     cal=0
     if i==0:
@@ -24,12 +23,9 @@ def addOneToNumber(A):
       A[length-i-1]=A[length-i-2]
     A[0]=carry
   else:
-    for i in A:
-      if i ==0:
-        pos+=1
-      else:
-        break
+    for i in range(length):
+      if A[i] !=0:
+        return A[i:]
+  return  A
 
-  return  A[pos:]
-
-print(addOneToNumber([ 0, 3, 7, 6, 4, 0, 5, 5, 5 ]))
+print(addOneToNumber([ 9,9,9 ]))
