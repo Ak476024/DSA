@@ -4,9 +4,9 @@ def printPattern(A):
   result=[[0]*A for i in range(A)]
 
   for i in range(A):
-    for j in range(A,A-i-1,-1):
-      result[i][j-1]=A-j+1
+    for j in range(A-1,A-i-2,-1):
+      result[i][j]=A-j
 
   return result
 
-print(printPattern(4))
+print(printPattern(3))
